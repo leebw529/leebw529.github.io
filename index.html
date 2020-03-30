@@ -99,10 +99,11 @@
 				// 等待所有加载
 				$(window).load(function (){
 					setTimeout(function(){						
-						$('body').css({
+						$('#load-flish').fadeToggle("slow","linear",function(){
+							$('body').css({
 							'backgroundImage': 'url("images/bg.jpg")',
-						}).find('#wrapper').css('display', 'block');
-						$('#load-flish').remove();						
+							}).find('#wrapper').css('display', 'block');
+						});							
 					}, 2000);
 				}); 
 			})
