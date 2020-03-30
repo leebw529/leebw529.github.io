@@ -71,13 +71,38 @@
 		<script type="text/javascript">
 			
 			$(function(){
+				var $load = $('#load-flish');
+				var d = new Date();
+				// console.log(d.getHours())
+				var dg = d.getHours();
+					if (dg <=5) {
+						$load.append('<img src = "images/images/0.jpg">')
+					}else if(dg == 6){
+						$load.append('<img src = "images/images/1.jpg">')
+					} else if (7 <= dg && dg < 10) {
+						$load.append('<img src = "images/images/2.jpg">')
+					} else if (10 <= dg && dg < 13) {
+						$load.append('<img src = "images/images/3.jpg">')
+					} else if (dg == 13) {
+						$load.append('<img src = "images/images/4.jpg">')
+					} else if (dg == 14) {
+						$load.append('<img src = "images/images/5.jpg">')
+					} else if (14 < dg && dg < 22) {
+						$load.append('<img src = "images/images/6.jpg">')
+					} else if (dg == 22) {
+						$load.append('<img src = "images/images/7.jpg">')
+					} else if (dg == 23) {
+						$load.append('<img src = "images/images/8.jpg">')
+					}
+				
+				
 				// 等待所有加载
 				$(window).load(function (){
 					setTimeout(function(){						
-							$('body').css({
-								'backgroundImage': 'url("images/bg.jpg")',
-							}).find('#wrapper').css('display', 'block');
-							$('#load-flish').remove();						
+						$('body').css({
+							'backgroundImage': 'url("images/bg.jpg")',
+						}).find('#wrapper').css('display', 'block');
+						$('#load-flish').remove();						
 					}, 2000);
 				}); 
 			})
@@ -87,7 +112,7 @@
 	<body>
 		<div id="load-flish">
 			<div class="lf"></div>
-			<img src="images/images/2.jpg" alt="">
+			<!-- <img src="images/images/2.jpg" alt=""> -->
 		</div>
 		<!-- Wrapper -->
 			<div id="wrapper">
