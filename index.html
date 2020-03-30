@@ -70,16 +70,17 @@
 		<script type="text/javascript">
 			
 			$(function(){
-				
+				// 等待所有加载
+				$(window).load(function (){
+					setTimeout(function(){						
+							$('body').css({
+								'backgroundImage': 'url("images/bg.jpg")',
+							}).find('#wrapper').css('display', 'block');
+							$('#load-flish').remove();						
+					}, 2000);
+				}); 
 			})
-			// 等待所有加载
-			$(window).load(function () {
-				$('body').css({
-					'backgroundImage': 'url("images/bg.jpg")',
-				}).find('#wrapper').css('display', 'block');
-				$('#load-flish').remove();
-
-			}); 
+			
 		</script>
 	</head>
 	<body>
