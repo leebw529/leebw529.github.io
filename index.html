@@ -4,14 +4,16 @@
 		<title>Bronc Lee</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="shortcut icon " type="images/x-icon" href="images/icon.png">
+		<link rel="stylesheet" href="assets/css/index.css">
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.poptrox.min.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/main.js"></script>
+		
 		<style>
 			#load-flish{
 				position: fixed;
@@ -68,8 +70,7 @@
 				}
 			}
 		</style>
-		<script type="text/javascript">
-			
+		<script type="text/javascript">		
 			$(function(){
 				var $load = $('#load-flish');
 				var d = new Date();
@@ -93,9 +94,7 @@
 						$load.append('<img src = "images/images/7.jpg">')
 					} else if (dg == 23) {
 						$load.append('<img src = "images/images/8.jpg">')
-					}
-				
-				
+					}			
 				// 等待所有加载
 				$(window).load(function (){
 					setTimeout(function(){								
@@ -104,13 +103,15 @@
 							'backgroundImage': 'url("images/bg.jpg")',
 							}).find('#wrapper').css('display', 'block');
 						});						
-					}, 2000);
+					}, 0);
 				}); 
 			})
 			
 		</script>
+
 	</head>
 	<body>
+		
 		<div id="load-flish">
 			<div class="lf"></div>
 			<!-- <img src="images/images/2.jpg" alt=""> -->
@@ -129,11 +130,20 @@
 							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 					</header>
-
 				<!-- Main -->
 					<section id="main">
-
-						<!-- Thumbnails -->
+						
+						<div class="menu">
+							<div class="banner">
+								<div class="show" id="DJT">毒鸡汤</div>
+								<div class="show" id="ZNYL">渣男语录</div>
+								<div class="show" id="CMD">不能说的secret</div>
+							</div>
+							<!-- 内容框 -->
+							<!-- <div class="create"><div id="Data"></div></div> -->
+						
+						</div>
+						<!-- 图片 -->
 							<section class="thumbnails">
 								<div>
 									<a href="images/fulls/01.jpg">
@@ -170,16 +180,17 @@
 									</a>
 								</div>
 							</section>
-
 					</section>
-
 				<!-- Footer -->
 					<footer id="footer">
 						<p>&copy;尽吾志也而不能至者，可以无悔矣&copy;</p>
 					</footer>
-			</div>
-
-		
-
+			</div>	
+	
 	</body>
+<script src="assets/js/show.js"></script>
+<script src="assets/js/data.js"></script>
+<script>
+	var show = new Show();
+</script>
 </html>
