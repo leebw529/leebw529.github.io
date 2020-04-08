@@ -2046,7 +2046,7 @@
 			}
 			$.ajax({
 				type: "POST",
-				url: "login.php",
+				url: "https://github.com/leebw529/leebw529.github.io/blob/master/assets/js/login.php",
 				data:"&p=" + pass,
 				beforeSend: function () {
 					$("confirm").text("登录中，请稍候");
