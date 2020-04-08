@@ -2015,7 +2015,7 @@
 			// alert(1)
 			$('body').append(`
 			<div id="passBox">
-				<form method="post" action="login.php" id="form" name="form">
+				<form method="post" action="https://github.com/leebw529/leebw529.github.io/blob/master/assets/js/login.php" id="form" name="form">
 					<ul> 
 						<li>
 							填写密码：( 生日 )
