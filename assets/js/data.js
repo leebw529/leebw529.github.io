@@ -2015,27 +2015,28 @@
 			// alert(1)
 			$('body').append(`
 			<div id="passBox">
-				<form method="post" action="https://github.com/leebw529/leebw529.github.io/blob/master/assets/js/login.php" id="form" name="form">
+				<form method="post" action="" id="form" name="form">
 					<ul> 
 						<li>
 							填写密码：( 生日 )
 							<input type="password" name="pass" id="pass" size="16" maxlength="8">
 						</li>
 						<li>
-							<input type="submit" style="border:0; margin: 20px 40px" value="确定"/>
+							<input type="submit" style="border:0; margin: 20px 40px" value="确定"/><input type="button" id="quit" style="border:0; margin: 20px 40px" value="关闭" />
 						</li>
 						<li id="confirm"></li>
 					</ul>
 				</form>
 			</div>`);	
-		}else{
-
 		}
 		$(document).ready(function () {
 			$("#form").submit(function () {
 				login();
 				return false;
 			});
+			$('#quit').click(function(){
+				$('#passBox').remove();
+			})
 		});
 		function login(){
 			var pass = $("#pass").val();
@@ -2044,25 +2045,18 @@
 				$("#pass").focus();
 				return false;
 			}
-			$.ajax({
-				type: "POST",
-				url: "https://github.com/leebw529/leebw529.github.io/blob/master/assets/js/login.php",
-				data:"&p=" + pass,
-				beforeSend: function () {
-					$("confirm").text("登录中，请稍候");
-				},
-				success: function (msg){
-					if (msg == "success") {
-						$("#confirm").text("登录成功，欢迎你这个女人回来！正在进入你的secret");
-						setTimeout(function(){
-							$('#passBox').hide();
-						}, 2000);
-					} else {
-						$("#confirm").text("密码不正确！");
-
-					}
-				}
-			});
+			if ($('#pass')[0].value == '1208' || $('#pass')[0].value == '128' || $('#pass')[0].value == '001208' || $('#pass')[0].value == '20001208') {
+					Cookies.set('sign', 'She is back', 1, '/');
+					$("#confirm").text("登录成功，欢迎你这个女人回来！正在进入你的secret");
+					setTimeout(function () {
+						$('#passBox').hide();
+					}, 4000);
+			} else {
+					$("#confirm").text("密码不正确！");
+					$('#pass')[0].value = '';
+			}
+			return false;
+			
 		}
 
 	}
