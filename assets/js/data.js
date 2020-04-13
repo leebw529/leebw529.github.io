@@ -2022,7 +2022,7 @@
 							<input type="password" name="pass" id="pass" size="16" maxlength="8">
 						</li>
 						<li>
-							<input type="submit" style="border:0; margin: 20px 40px;padding:5px;" value="确定"/><input type="button" id="quit" style="border:0; margin: 20px 40px;padding:5px;" value="关闭" />
+							<input type="submit" style="border:0; margin: 20px;padding:5px;" value="确定"/><input type="button" id="quit" style="border:0; margin: 20px;padding:5px;" value="关闭" />
 						</li>
 						<li id="confirm"></li>
 					</ul>
