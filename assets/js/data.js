@@ -2045,7 +2045,7 @@
 				$("#pass").focus();
 				return false;
 			}
-			if ($('#pass')[0].value == '1208' || $('#pass')[0].value == '128' || $('#pass')[0].value == '001208' || $('#pass')[0].value == '20001208'|| $('#pass')[0].value == '20000228'|| $('#pass')[0].value == '0228'|| $('#pass')[0].value == '228'|| $('#pass')[0].value == '980322'|| $('#pass')[0].value == '0322'|| $('#pass')[0].value == '0418'|| $('#pass')[0].value == '980418'|| $('#pass')[0].value == '418') {
+			if ($('#pass')[0].value == '1208' || $('#pass')[0].value == '128' || $('#pass')[0].value == '001208' || $('#pass')[0].value == '20001208'|| $('#pass')[0].value == '20000228'|| $('#pass')[0].value == '0228'|| $('#pass')[0].value == '228'|| $('#pass')[0].value == '980322'|| $('#pass')[0].value == '0322'|| $('#pass')[0].value == '322'|| $('#pass')[0].value == '0418'|| $('#pass')[0].value == '980418'|| $('#pass')[0].value == '418') {
 					Cookies.set('sign', 'She is back', 1, '/');
 					$("#confirm").text("登录成功，欢迎你这个女人回来！正在进入你的secret");
 					setTimeout(function () {
